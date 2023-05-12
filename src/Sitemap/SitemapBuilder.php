@@ -105,6 +105,11 @@ class SitemapBuilder implements SitemapBuilderInterface
 	 */
 	public function loc(string $path): SitemapBuilderInterface
 	{
+		if (strpos($path, 'http') === 0) {
+		    return $this->append()->url($path);
+		}
+
+
 		if ($path[0] !== '/') {
 			$path = "/{$path}";
 		}
@@ -137,6 +142,11 @@ class SitemapBuilder implements SitemapBuilderInterface
 	 */
 	public function alternate(string $path, string $lang)
 	{
+		if (strpos($path, 'http') === 0) {
+		    $this->url['alternate'][] = [Helper::escapeUrl($path), $lang];
+			return $this;
+		}
+
 		if ($path[0] !== '/') {
 			$path = "/{$path}";
 		}
