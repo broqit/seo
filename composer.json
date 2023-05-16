@@ -24,7 +24,7 @@
 		}
 	],
 	"require":  {
-		"php": ">=7.1.33",
+		"php": ">=7.1.16",
 		"ext-xml": "*",
 		"ext-curl": "*",
 		"ext-json": "*"
