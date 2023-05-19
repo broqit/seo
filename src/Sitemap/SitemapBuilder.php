@@ -125,9 +125,9 @@ class SitemapBuilder implements SitemapBuilderInterface
 	 */
 	public function url(string $url): SitemapBuilderInterface
 	{
-		if ($this->max <= 0) {
-			throw new SitemapException("The maximum urls has been exhausted");
-		}
+		//if ($this->max <= 0) {
+		//	throw new SitemapException("The maximum urls has been exhausted");
+		//}
 
 		$this->url['loc'] = Helper::escapeUrl($url);
 		return $this;
@@ -217,7 +217,7 @@ class SitemapBuilder implements SitemapBuilderInterface
 				$url->addChild($n, $v);
 			}
 
-			$this->max--;
+			//$this->max--;
 			$this->url = [];
 		}
 
