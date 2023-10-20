@@ -30,7 +30,7 @@ interface SitemapBuilderInterface extends SeoInterface
 	 * News namespace
 	 * @var string
 	 */
-	public const NEWS_NS = 'http://www.google.com/schemas/sitemap-news/0.9';
+	public const NEWS_NS = 'https://www.google.com/schemas/sitemap-news/0.9';
 
 	public function loc(string $path): SitemapBuilderInterface;
 
